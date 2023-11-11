@@ -21,6 +21,11 @@ public class BeanConfig {
 	@Autowired
 	private AuthHandler authHandler;
 
+       @Bean
+	public WebProperties.Resources getWebPropertyResources(){
+		return new WebProperties.Resources();
+	}
+
 	@Bean
 	RouterFunction<ServerResponse> userRoute() {
 		System.out.println("inside route");
